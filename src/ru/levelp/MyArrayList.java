@@ -81,5 +81,11 @@ public class MyArrayList {
         }
 
     }
+
+    public void clear() {
+
+        int[] temp = new int[0];
+        values = temp;
+    }
 }
 

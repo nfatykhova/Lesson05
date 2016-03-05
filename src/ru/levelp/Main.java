@@ -62,6 +62,7 @@ public class Main {
 //        // 55 48 93 34
         list.remove(1);
 //        // 55 48 93
+//        list.clear();
 //
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
