@@ -58,7 +58,7 @@ public class Main {
         list.add(34);
 
 //        // 55 93 34
-//        list.insert(1, 48);
+        list.insert(1, 48);
 //        // 55 48 93 34
         list.remove(1);
 //        // 55 48 93

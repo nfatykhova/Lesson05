@@ -42,22 +42,44 @@ public class MyArrayList {
         // удаляет n-ный эл-т из массива - уменьшает размер массива
         // return значение удаленного эл-та
 
-        // до индекса копи, потом копи -1, один эл-т пропускается
+        if (values == null) {
+            return 0;
+        }
 
-            int[] temp = new int[values.length - 1];
-            for (int i = 0; i < values[index]; i++) {
+        int[] temp = new int[values.length - 1];
+
+        for (int i = 0; i < index; i++) {
                 temp[i] = values[i];
-            }
-            for (int i = values[index + 1]; i < values.length; i++) {
+        }
+
+        for (int i = index; i < values.length - 1; i++) {
                 temp[i] = values[i + 1];
             }
+            values = temp;
             return values[index];
         }
-//
-//
-//    public void insert(int index, int value) {
-//        // добавляет по индексу, остальное сдвигает
-//    }
 
+
+    public void insert(int index, int value) {
+        // добавляет по индексу, остальное сдвигает
+
+        if (values == null) {
+            values = new int[1];
+            values[0] = value;
+        } else {
+
+            int[] temp = new int[values.length + 1];
+
+            for (int i = 0; i < index; i++) {
+                temp[i] = values[i];
+            }
+            for (int i = index; i < values.length; i++) {
+                temp[i + 1] = values[i];
+            }
+            temp[index] = value;
+            values = temp;
+        }
+
+    }
 }
 
