@@ -53,31 +53,31 @@ public class Main {
 //        int[] array = new int[3];
 
         MyArrayList list = new MyArrayList();
-//        list.add(55);
-//        list.add(93);
-//        list.add(34);
-//
-////        // 55 93 34
+        list.add(55);
+        list.add(93);
+        list.add(34);
+
+//        // 55 93 34
 //        list.insert(1, 48);
-////        // 55 48 93 34
-//        list.remove(1);
-////        // 55 48 93
-////        list.clear();
-////
-//        for (int i = 0; i < list.size(); i++) {
-//            System.out.println(list.get(i));
+//        // 55 48 93 34
+        list.remove(2);
+//        // 55 48 93
+//        list.clear();
+//
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
 
- //       }
+        }
 
-        MyStack stack = new MyStack();
-        stack.push(3);
-        stack.push(5);
-        stack.push(2);
-
-        stack.pop();
-
-        stack.push(89);
-
-        System.out.println(stack.peek());
+//        MyStack stack = new MyStack();
+//        stack.push(3);
+//        stack.push(5);
+//        stack.push(2);
+//
+//        stack.pop();
+//
+//        stack.push(89);
+//
+//        System.out.println(stack.peek());
     }
 }

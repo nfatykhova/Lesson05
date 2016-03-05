@@ -46,17 +46,27 @@ public class MyArrayList {
             return 0;
         }
 
+        int del = values[index];
+
         int[] temp = new int[values.length - 1];
 
-        for (int i = 0; i < index; i++) {
-                temp[i] = values[i];
-        }
+        if (index < values.length - 1) {
 
-        for (int i = index; i < values.length - 1; i++) {
+            for (int i = 0; i < index; i++) {
+                temp[i] = values[i];
+            }
+
+            for (int i = index; i < values.length - 1; i++) {
                 temp[i] = values[i + 1];
             }
+
+        } else if (index == values.length - 1) {
+            for (int i = 0; i < index; i++) {
+                temp[i] = values[i];
+            }
+        }
             values = temp;
-            return values[index];
+            return del;
         }
 
 
